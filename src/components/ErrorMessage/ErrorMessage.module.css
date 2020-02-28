@@ -1,0 +1,19 @@
+.ErrorMessage {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px #ccc;
+}
+
+.ErrorMessage h2 {
+    color: #303030;
+    font-family: 'Open Sans';
+    font-size: 1.5em;
+    margin: 5px 0px;
+}
+
+.ErrorMessage p {
+    font-size: 1.2em;
+}

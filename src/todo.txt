@@ -1,0 +1,3 @@
+2 -> Adding a Page to Show Movie Details
+4 -> Searching Option
+5 -> Internationalization
