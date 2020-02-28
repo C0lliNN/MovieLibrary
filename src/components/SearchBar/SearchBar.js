@@ -1,8 +1,6 @@
 import React from 'react'
 import classes from './SearchBar.module.css'
-import { faSearch } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import searchIcon from '../../assets/img/search.svg'
 
 export default (props) => {
 
@@ -20,7 +18,7 @@ export default (props) => {
                     defaultMessage: 'Search a Movie...'
                 })}/>
             <button className={classes.Button}>
-                <FontAwesomeIcon icon={faSearch} size="3x"/>
+                <img src={searchIcon} alt="Search"/>
             </button>
         </form>
     );

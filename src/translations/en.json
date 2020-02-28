@@ -1,0 +1,17 @@
+{
+    "pageTitle": "Movie Library",
+    "Header.title": "Movie Library",
+    "SearchBar.placeholder": "Search a Movie...",
+    "Movies.searchBy": "Search By",
+    "Movies.mostPopularMovies": "Most Popular Movies",
+    "Movie.notSpecified": "Not Specified",
+    "Movie.noPosterAvailable": "No Poster Available",
+    "MovieInformation.production": "Production:",
+    "MovieInformation.releaseDate": "Release Date:",
+    "MovieInformation.genres": "Genres:",
+    "MovieInformation.website": "Website:",
+    "MovieInformation.overview": "Overview:",
+    "ErrorMessage.title": "Something unexpected has happened!",
+    "ErrorMessage.error": "Error:",
+    "languageAPIIdentifider": "en-US"
+}

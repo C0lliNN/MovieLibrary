@@ -3,6 +3,7 @@ import Spinner from '../../components/Spinner/Spinner';
 import axios from 'axios';
 import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 import MovieInformation from '../../components/MovieInformation/MovieInformation'
+import {injectIntl} from 'react-intl'
 
 class MovieDetails extends Component {
 
@@ -36,7 +37,13 @@ class MovieDetails extends Component {
     }
 
     componentDidMount () {
-        axios.get('/movie/' + this.props.match.params.id + '?api_key=466eefcef086aaa1375e8ecfebc6a345&language=en-US')
+
+        const queryLanguage = this.props.intl.formatMessage({
+            id: 'languageAPIIdentifider',
+            defaultMessage: 'en-US'
+        })
+
+        axios.get(`/movie/${this.props.match.params.id }?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}`)
         .then(response => {
             this.setState({
                 loading: false,
@@ -55,4 +62,4 @@ class MovieDetails extends Component {
 
 }
 
-export default MovieDetails;
+export default injectIntl(MovieDetails);

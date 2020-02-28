@@ -78,7 +78,12 @@ class MovieSearch extends Component {
 
     componentDidMount() {
 
-        axios.get('/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=en-US&page=1').then(response => {
+        const queryLanguage = this.props.intl.formatMessage({
+            id: 'languageAPIIdentifider',
+            defaultMessage: 'en-US'
+        })
+
+        axios.get(`/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1`).then(response => {
 
           this.setState({
             movies: response.data.results,
@@ -113,7 +118,12 @@ class MovieSearch extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevState.queryString !== this.state.queryString) {
 
-            const url = this.state.queryString ? '/search/movie?api_key=466eefcef086aaa1375e8ecfebc6a345&language=en-US&page=1&include_adult=true&query=' + this.state.queryString : '/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=en-US&page=1';
+            const queryLanguage = this.props.intl.formatMessage({
+                id: 'languageAPIIdentifider',
+                defaultMessage: 'en-US'
+            })
+
+            const url = this.state.queryString ? `/search/movie?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1&include_adult=true&query=${this.state.queryString}` : `/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1`;
 
             axios.get(url).then(response => {
                 this.setState({

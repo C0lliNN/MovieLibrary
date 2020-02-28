@@ -5,16 +5,22 @@ import App from './containers/App/App';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios'
 import {IntlProvider} from 'react-intl'
+import messages_pt from './translations/pt.json'
+import messages_en from './translations/en.json'
 
 axios.defaults.baseURL = "https://api.themoviedb.org/3"
 
+const messages = {
+    'pt': messages_pt,
+    'en': messages_en
+}
+
+const language = navigator.language.split(/[-_]/)[0];
+
 ReactDOM.render((
-    <IntlProvider>
+    <IntlProvider locale={language} messages={messages[language]}>
         <App /> 
     </IntlProvider>), 
+    
 document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();

@@ -3,7 +3,7 @@
   "name": "Movie Library",
   "icons": [
     {
-      "src": "movie.png",
+      "src": "icon.png",
       "type": "image/png",
       "sizes": "512x512"
     }

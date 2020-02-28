@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.module.css'
 import Header from '../../components/Header/Header';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import MovieDetails from '../MovieDetails/MovieDetails';
 import MovieSearch from '../MovieSearch/MovieSearch';
 import Footer from '../../components/Footer/Footer';
+import {injectIntl} from 'react-intl'
 
-class App extends Component {
+const App = (props) => {
 
-  render() {
+    document.title = props.intl.formatMessage({
+      id: 'pageTitle',
+      defaultMessage: 'Movie Library'
+    });
 
     return (
       
@@ -30,10 +34,8 @@ class App extends Component {
       </main>
       
     );
-  }
-
   
 
 }
 
-export default App;
+export default injectIntl(App);
