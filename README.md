@@ -5,15 +5,13 @@
 
 ## Overview
 
-[Link](https://example.org/ "title" target="_blank")
-
-A very easy to use Web Application developed in [ReactJS](https://reactjs.org/){:target="_blank"} that uses the [Movie Database API](https://www.themoviedb.org/?target=_blank){:target="_blank"} allowing users search by movies' information in friendly way. 
+A very easy to use Web Application developed in [ReactJS](https://reactjs.org/) that uses the [Movie Database API](https://www.themoviedb.org/?target=_blank) allowing users search by movies' information in friendly way. 
 
 ## Additional Libraries
 
-* [React Router](https://reacttraining.com/react-router/web/guides/quick-start){:target="_blank"}: Navigation between different pages
-* [Axios](https://github.com/axios/axios){:target="_blank"}: Fetch data from the Movie Database API
-* [React intl](https://github.com/formatjs/react-intl){:target="_blank"}: Internationalization(Currently Supported languages are English and Portuguese)
+* [React Router](https://reacttraining.com/react-router/web/guides/quick-start): Navigation between different pages
+* [Axios](https://github.com/axios/axios): Fetch data from the Movie Database API
+* [React intl](https://github.com/formatjs/react-intl): Internationalization(Currently Supported languages are English and Portuguese)
 
 ## Features
 
