@@ -2,7 +2,7 @@
 
 ## Overview
 
-A very easy to use Web Application developed in [ReactJS](https://reactjs.org/) that uses the [Movie Database API](https://www.themoviedb.org/) allowing users search by movies' information in friendly way. [Check it out]()
+A very easy to use Web Application developed in [ReactJS](https://reactjs.org/) that uses the [Movie Database API](https://www.themoviedb.org/) allowing users search by movies' information in friendly way. [Check it out](https://c0llinn.github.io/)
 
 ## Additional Libraries
 
