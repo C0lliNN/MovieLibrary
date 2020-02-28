@@ -5,7 +5,7 @@
 
 ## Overview
 
-<a href="https://www.google.com.br">Link</a>
+<a href="https://www.google.com.br" target="_blank">Link</a>
 
 A very easy to use Web Application developed in [ReactJS](https://reactjs.org/){:target="_blank"} that uses the [Movie Database API](https://www.themoviedb.org/?target=_blank){:target="_blank"} allowing users search by movies' information in friendly way. 
 
