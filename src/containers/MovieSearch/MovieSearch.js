@@ -39,7 +39,7 @@ const MovieSearch = props => {
                 movies: null,
             })
 
-            props.history.push('?query=' + encodeURI(this.state.searchFieldValue));
+            props.history.push('?query=' + encodeURI(searchFieldValue));
        
         }
     }
@@ -80,7 +80,10 @@ const MovieSearch = props => {
             defaultMessage: 'en-US'
         })
 
-        const url = location.search ? `/search/movie?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1&include_adult=true&query=${location.search}` : `/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1`;
+        const params = new URLSearchParams(location.search);
+        const query = params.get('query');
+
+        const url = location.search ? `/search/movie?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1&include_adult=true&query=${query}` : `/movie/popular?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}&page=1`;
 
         axios.get(url).then(response => {
             setRequestState({
@@ -98,7 +101,7 @@ const MovieSearch = props => {
             })
         })
 
-        setQueryString(location.search)
+        setQueryString(query)
         
     }, [location, intl])
     
