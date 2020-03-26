@@ -1,0 +1,23 @@
+.Backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 110;
+    cursor: pointer;
+}
+
+.Show {
+    display: block;
+}
+
+.Hide {
+    display: none;
+}
+
+@media(min-width: 525px) {
+    .Backdrop {
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+}

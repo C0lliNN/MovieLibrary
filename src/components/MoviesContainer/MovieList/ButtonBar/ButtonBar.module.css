@@ -1,0 +1,54 @@
+.ButtonBar {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.PageLink {
+    text-decoration: none;
+    display: block;
+    background-color: rgb(218, 118, 231);
+    color: white;
+    text-align: center;
+    width: 35px;
+    height: 35px;
+    margin: 2px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    border-radius: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Active {
+    background-color: rgb(217, 94, 233);
+}
+
+.Hide {
+    display: none;
+}
+
+.PageLink:hover {
+    background-color: rgb(217, 94, 233);
+}
+
+@media(min-width: 800px) {
+    .PageLink {
+        width: 40px;
+        height: 40px;
+        margin: 2px;
+        padding-top: 8px;
+    }
+}
+
+@media(min-width: 600px) {
+    .PageLink {
+        width: 35px;
+        height: 35px;
+        margin: 2px;
+        padding-top: 5px;
+    }
+    .Hide {
+        display: inline-block;
+    }
+}
