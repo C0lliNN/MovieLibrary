@@ -1,7 +1,7 @@
 {
     "pageTitle": "Movie Library",
     "Header.title": "Movie Library",
-    "SearchBar.placeholder": "Search a Movie...",
+    "SearchBar.placeholder": "Search...",
     "Movies.searchBy": "Search By",
     "Movies.mostPopularMovies": "Most Popular Movies",
     "Movie.notSpecified": "Not Specified",
@@ -12,6 +12,9 @@
     "MovieInformation.website": "Website:",
     "MovieInformation.overview": "Overview:",
     "ErrorMessage.title": "Something unexpected has happened!",
-    "ErrorMessage.error": "Error:",
-    "languageAPIIdentifider": "en-US"
+    "ErrorMessage.error": "Error: ",
+    "languageAPIIdentifider": "en-US",
+    "LinkContext.Popular": "Popular",
+    "LinkContext.TopRated": "Top Rated",
+    "LinkContext.Upcoming": "Upcoming"
 }

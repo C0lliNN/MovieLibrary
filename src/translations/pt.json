@@ -1,7 +1,7 @@
 {
     "pageTitle": "Biblioteca de Filmes",
     "Header.title": "Biblioteca de Filmes",
-    "SearchBar.placeholder": "Procure um filme...",
+    "SearchBar.placeholder": "Procurar...",
     "Movies.searchBy": "Procurar por",
     "Movies.mostPopularMovies": "Filmes Mais Populares",
     "Movie.notSpecified": "Não específicado",
@@ -12,6 +12,9 @@
     "MovieInformation.website": "Página:",
     "MovieInformation.overview": "Visão Geral:",
     "ErrorMessage.title": "Algo inesperado aconteceu!",
-    "ErrorMessage.error": "Erro:",
-    "languageAPIIdentifider": "pt-BR"
+    "ErrorMessage.error": "Erro: ",
+    "languageAPIIdentifider": "pt-BR",
+    "LinkContext.Popular": "Populares",
+    "LinkContext.TopRated": "Bem Avaliados",
+    "LinkContext.Upcoming": "Lançamentos"
 }

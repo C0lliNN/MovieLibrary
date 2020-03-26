@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './ErrorMessage.module.css'
 import { FormattedMessage } from 'react-intl'
 
-export default (props) => (
+const ErrorMessage = (props) => (
     <div className={classes.ErrorMessage}>
         <h2>
             <FormattedMessage 
@@ -17,3 +17,5 @@ export default (props) => (
         </p>
     </div>
 )
+
+export default React.memo(ErrorMessage);
