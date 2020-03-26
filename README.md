@@ -1,8 +1,11 @@
 # Movie Library
 
+![MovieLibrary Page Print Screen](https://i.imgur.com/s67pEVT.png)
+### [Check it out](https://c0llinn.github.io/MovieLibrary/)
+
 ## Overview
 
-A very easy to use Web Application developed in [ReactJS](https://reactjs.org/) that uses the [Movie Database API](https://www.themoviedb.org/) allowing users search by movies' information in friendly way. [Check it out]()
+A very easy to use Web Application developed in [ReactJS](https://reactjs.org/) that uses the [Movie Database API](https://www.themoviedb.org/?target=_blank) allowing users search by movies' information in friendly way. 
 
 ## Additional Libraries
 
