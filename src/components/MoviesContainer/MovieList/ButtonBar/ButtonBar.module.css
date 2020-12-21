@@ -2,33 +2,27 @@
     width: 80%;
     margin: auto;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .PageLink {
     text-decoration: none;
-    display: block;
     background-color: rgb(218, 118, 231);
-    color: white;
-    text-align: center;
+    color: #fff;
     width: 35px;
     height: 35px;
     margin: 2px;
-    padding-top: 5px;
     box-sizing: border-box;
     border-radius: 100%;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
-.Active {
-    background-color: rgb(217, 94, 233);
-}
-
-.Hide {
-    display: none;
-}
-
-.PageLink:hover {
+.PageLink:hover, .Active  {
     background-color: rgb(217, 94, 233);
 }
 
@@ -36,8 +30,6 @@
     .PageLink {
         width: 40px;
         height: 40px;
-        margin: 2px;
-        padding-top: 8px;
     }
 }
 
@@ -45,10 +37,5 @@
     .PageLink {
         width: 35px;
         height: 35px;
-        margin: 2px;
-        padding-top: 5px;
-    }
-    .Hide {
-        display: inline-block;
     }
 }

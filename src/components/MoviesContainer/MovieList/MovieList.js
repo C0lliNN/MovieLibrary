@@ -41,7 +41,6 @@ const MovieList = props => {
     
     return (
         <div className={classes.MovieList}>
-            {!props.match.params.query && <ButtonBar/>}
             <div className={classes.MoviesHolder}>{movies}</div>
             {!props.match.params.query && <ButtonBar/>}
             <MovieDetails 

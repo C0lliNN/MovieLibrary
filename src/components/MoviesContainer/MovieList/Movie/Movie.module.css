@@ -1,65 +1,73 @@
 .Movie {
-    width: 300px;
-    padding: 18px;
-    margin: 20px 10px;
-    box-sizing: border-box;
-    border-radius: 5px;
-    box-shadow: 0px 0px 3px rgb(142, 89, 109);
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.05s ease-out;
+  width: 300px;
+  padding: 18px;
+  margin: 20px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgb(142, 89, 109);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+  background-color: white;
+ 
 }
-
 .Movie:hover {
-    transform: scale(1.02);
+    transform: scale(1.1);
 }
 
 .Movie a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Movie img {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .Movie h3 {
-    color: rgb(169, 5, 219);
-    font-size: 1.3em;
+  color: rgb(169, 5, 219);
+  font-size: 1.3em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .Movie h4 {
-    height: 80%;
-    padding-top: 200px;
-    box-sizing: border-box;
-    font-size: 1.2em;
-    color: rgb(148, 52, 52);
+  height: 80%;
+  padding-top: 200px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  color: rgb(148, 52, 52);
 }
 
 .Movie p {
-    font-weight: 700;
-    font-size: 1.2em;
-    color: #5D39AE;
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #5d39ae;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@media(min-width: 525px) {
-    .Movie {
-        width: 200px;
-        padding: 15px;
-    }
+@media (min-width: 525px) {
+  .Movie {
+    width: 200px;
+    padding: 15px;
+  }
 }
 
-@media(min-width: 800px) {
-    .Movie {
-        width: 280px;
-        padding: 20px;
-    }
-    .Movie h3 {
-        font-size: 1.3em;
-    }
-    .Movie p {
-        font-size: 1.1em;
-    }
+@media (min-width: 800px) {
+  .Movie {
+    width: 280px;
+    padding: 20px;
+  }
+  .Movie h3 {
+    font-size: 1.3em;
+  }
+  .Movie p {
+    font-size: 1.1em;
+  }
 }
