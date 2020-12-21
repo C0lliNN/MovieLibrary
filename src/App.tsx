@@ -1,20 +1,25 @@
 import React from 'react';
-import './App.module.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { useFormatMessage } from 'react-intl-hooks';
+import { Helmet } from 'react-helmet';
 import MoviesContainer from './components/MoviesContainer/MoviesContainer';
-import { injectIntl } from 'react-intl';
 import Background from './components/UI/Background/Background';
 import classes from './App.module.css';
 import Menu from './components/Menu/Menu';
 
-const App = (props) => {
-  document.title = props.intl.formatMessage({
-    id: 'pageTitle',
-    defaultMessage: 'Movie Library',
-  });
+const App: React.FC = () => {
+  const translate = useFormatMessage();
 
   return (
     <div>
+      <Helmet>
+        <title>
+          {translate({
+            id: 'pageTitle',
+            defaultMessage: 'Movie Library',
+          })}
+        </title>
+      </Helmet>
       <Background />
       <BrowserRouter basename="/MovieLibrary">
         <main className={classes.App}>
@@ -31,4 +36,4 @@ const App = (props) => {
   );
 };
 
-export default injectIntl(App);
+export default App;

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import LinkItem from './LinkItem/LinkItem';
 import classes from './LinkList.module.css';
-import { LinkContext } from '../../../link-context';
+import { GenresContext } from '../../../context/genres';
 import Spinner from '../../UI/Spinner/Spinner';
 import ErrorMessage from '../../ErrorMessage/ErrorMessage';
 
 export default (props) => {
-  const links = useContext(LinkContext);
+  const links = useContext(GenresContext);
   let content = <ErrorMessage message="Can't load the Categories" />;
 
   if (links) {

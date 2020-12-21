@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import classes from './Movie.module.css';
 import { useLocation, useRouteMatch } from 'react-router-dom';
-import { GenresContext } from '../../../../context/categories';
+import { GenresContext } from '../../../../context/genres';
 
 import { useFormatMessage } from 'react-intl-hooks';
 
