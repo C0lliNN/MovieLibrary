@@ -1,34 +1,33 @@
-
 .LinkList {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 50%;
-    margin-top: 30px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    border-top: 1px solid rgba(204, 204, 204, 0.4);
-    border-bottom: 1px solid rgba(204, 204, 204, 0.4);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  margin-top: 30px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-top: 1px solid rgba(204, 204, 204, 0.4);
+  border-bottom: 1px solid rgba(204, 204, 204, 0.4);
 }
 
 .LinkList::-webkit-scrollbar {
-    width: 0.2em;
-    border-top-right-radius: 10px;
+  width: 0.2em;
+  border-top-right-radius: 10px;
 }
-   
+
 .LinkList::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 15px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
 }
 
 .LinkList::-webkit-scrollbar-thumb {
-    background-color: rgb(218, 118, 231);
-    border-radius: 100px;
-    outline: 1px solid rgb(218, 118, 231);
+  background-color: rgb(218, 118, 231);
+  border-radius: 100px;
+  outline: 1px solid rgb(218, 118, 231);
 }
 
-@media(min-height: 750px) {
-    .LinkList {
-        height: 60%;
-    }
+@media (min-height: 750px) {
+  .LinkList {
+    height: 60%;
+  }
 }

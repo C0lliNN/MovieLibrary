@@ -1,27 +1,25 @@
 .SideDrawer {
-    background-color: #f5f5f5;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
-    width: 60%;
-    height: 100%;
-    position: fixed;
-    z-index: 115;
-    transition: transform 0.2s ease-in-out;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  width: 60%;
+  height: 100%;
+  position: fixed;
+  z-index: 115;
+  transition: transform 0.2s ease-in-out;
 }
 
 .Hide {
-    transform: translateX(-150%);
-    
+  transform: translateX(-150%);
 }
 
 .Show {
-    transform: translateX(0);
-
+  transform: translateX(0);
 }
 
-@media(min-width: 525px) {
-    .SideDrawer {
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        height: 95%;
-    }
+@media (min-width: 525px) {
+  .SideDrawer {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    height: 95%;
+  }
 }

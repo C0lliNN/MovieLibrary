@@ -1,21 +1,21 @@
 .LinkItem {
-    text-decoration: none;
-    width: 100%;
-    padding: 6px 25px;
-    font-size: 1.1em;
-    box-sizing: border-box;
-    color: #9135b4;
-    font-family: 'Open Sans';
+  text-decoration: none;
+  width: 100%;
+  padding: 6px 25px;
+  font-size: 1.1em;
+  box-sizing: border-box;
+  color: #9135b4;
+  font-family: 'Open Sans';
 }
 
 .LinkItem:hover,
 .Active {
-    background-color: #AC4BBE;
-    color: white
+  background-color: #ac4bbe;
+  color: white;
 }
 
-@media(min-width: 1000px) {
-    .LinkItem {
-        font-size: 1.2em;
-    }
+@media (min-width: 1000px) {
+  .LinkItem {
+    font-size: 1.2em;
+  }
 }

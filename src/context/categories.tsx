@@ -3,7 +3,7 @@ import {
   useState,
   useEffect,
   useMemo,
-  useCallback
+  useCallback,
 } from 'react';
 import axios from 'axios';
 import React from 'react';
@@ -29,36 +29,36 @@ const GenresContextProvider: React.FC<Props> = (props) => {
     '/': {
       text: translate({
         id: 'LinkContext.Popular',
-        defaultMessage: 'Popular'
-      })
+        defaultMessage: 'Popular',
+      }),
     },
     '/upcoming': {
       text: translate({
         id: 'LinkContext.Upcoming',
-        defaultMessage: 'Upcoming'
-      })
-    }
+        defaultMessage: 'Upcoming',
+      }),
+    },
   });
 
   const queryLanguage = useMemo(
     () =>
       translate({
         id: 'languageAPIIdentifider',
-        defaultMessage: 'en-US'
+        defaultMessage: 'en-US',
       }),
-    []
+    [],
   );
 
   const getGenres = useCallback(async () => {
     try {
       const { data } = await axios.get(
-        `/genre/movie/list?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}`
+        `/genre/movie/list?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}`,
       );
       const newGenres = { ...genres };
       for (const genre of data.genres) {
         newGenres['/genre/' + genre.name] = {
           text: genre.name,
-          id: genre.id
+          id: genre.id,
         };
       }
       setGenres(newGenres);

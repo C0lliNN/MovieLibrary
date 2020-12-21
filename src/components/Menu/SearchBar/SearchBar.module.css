@@ -1,61 +1,60 @@
 .SearchBar {
-    width: 85%;
-    margin: 10px auto;
-    display: flex;
+  width: 85%;
+  margin: 10px auto;
+  display: flex;
 }
 
 .Input {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 0.5px solid rgba(250, 27, 131, 0.7);
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    outline: none;
-    color: #303030;
-    font-size: 1.1em;
-    font-family: 'Open Sans';
-    box-shadow: 0px 0px 1px rgba(0,0,0, 0.2);
+  display: block;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(250, 27, 131, 0.7);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  outline: none;
+  color: #303030;
+  font-size: 1.1em;
+  font-family: 'Open Sans';
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
 }
 
 ::placeholder {
-    color: rgba(100, 100, 100, 0.5)
+  color: rgba(100, 100, 100, 0.5);
 }
 
 .Input:focus {
-    outline: none;
-    box-shadow: 0px 0px 1px rgba(0,0,0, 0.8);
+  outline: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.8);
 }
 
 .Button {
-    display: block;
-    padding: 6px 10px;
-    border: none;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: rgb(250, 27, 131);
-    text-align: center;
-    color: white;
-    box-shadow: 0px 0px 1px rgba(0,0,0, 0.2);
-    cursor: pointer;
+  display: block;
+  padding: 6px 10px;
+  border: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background-color: rgb(250, 27, 131);
+  text-align: center;
+  color: white;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .Button img {
-    width: 30px;   
+  width: 30px;
 }
 
-@media(min-width: 600px) {
-    .Input {
-        font-size: 1.0em;
-        padding: 8px;
-    }
-    .Button {
-        padding: 2px 8px;
-    }
+@media (min-width: 600px) {
+  .Input {
+    font-size: 1em;
+    padding: 8px;
+  }
+  .Button {
+    padding: 2px 8px;
+  }
 
-    .Button img {
-        width: 25px;   
-    }
-
+  .Button img {
+    width: 25px;
+  }
 }

@@ -1,12 +1,12 @@
 .MoviesContainer {
-    width: 100%;
-    float: none;
-    height: 100%;
+  width: 100%;
+  float: none;
+  height: 100%;
 }
 
-@media(min-width: 800px) {
-    .MoviesContainer {
-        width: 80%;
-        float: left;    
-    }
+@media (min-width: 800px) {
+  .MoviesContainer {
+    width: 80%;
+    float: left;
+  }
 }

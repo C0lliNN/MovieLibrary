@@ -1,30 +1,28 @@
 .Header {
-    box-sizing: border-box;
-    padding: 6px;
-    text-align: center;
+  box-sizing: border-box;
+  padding: 6px;
+  text-align: center;
 }
 
 .Title {
-    text-align: center;
-    color: #26425A;
-    font-size: 1.3em;
-    padding: 10px 0px ;
-    font-family: 'Roboto Slab';
-    box-sizing: border-box;
+  text-align: center;
+  color: #26425a;
+  font-size: 1.3em;
+  padding: 10px 0px;
+  font-family: 'Roboto Slab';
+  box-sizing: border-box;
 }
 
 .Header a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Header img {
-    width: 80px;
+  width: 80px;
 }
 
-@media(min-width: 600px) {
-
-    .Title {
-        font-size: 1.4em;
-    }
-    
+@media (min-width: 600px) {
+  .Title {
+    font-size: 1.4em;
+  }
 }

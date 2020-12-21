@@ -1,65 +1,64 @@
 .MovieList {
-    width: 100%;
-    margin: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    height: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .MovieList::-webkit-scrollbar {
-    width: 0.5em;
-    border-top-right-radius: 10px;
+  width: 0.5em;
+  border-top-right-radius: 10px;
 }
-   
+
 .MovieList::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 0;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
 }
 
 .MovieList::-webkit-scrollbar-thumb {
-    background-color: rgb(255, 0, 128);
-    border-radius: 0;
-    outline: 1px solid rgb(255, 0, 128);
+  background-color: rgb(255, 0, 128);
+  border-radius: 0;
+  outline: 1px solid rgb(255, 0, 128);
 }
 
 .MovieList .MoviesHolder {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    animation: slide-down 1s ease;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: slide-down 1s ease;
 }
 
 @keyframes slide-down {
-    0% {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-@media(min-width: 525px) {
-    .MovieList {
-        overflow-y: auto;
-        padding: 40px;
-    }
-    .MovieList::-webkit-scrollbar-track {
-        border-radius: 15px;
-    }
-    
-    .MovieList::-webkit-scrollbar-thumb {
-        border-radius: 100px;
-    }
-    
+@media (min-width: 525px) {
+  .MovieList {
+    overflow-y: auto;
+    padding: 40px;
+  }
+  .MovieList::-webkit-scrollbar-track {
+    border-radius: 15px;
+  }
+
+  .MovieList::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+  }
 }
 
-@media(min-width: 800px) {
-    .MovieList {
-        padding: 20px;
-    }
+@media (min-width: 800px) {
+  .MovieList {
+    padding: 20px;
+  }
 }
