@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Movie from './Movie/Movie'
+import Movie from './Movie/Movie.tsx'
 import classes from './MovieList.module.css'
 import ButtonBar from './ButtonBar/ButtonBar'
 import { withRouter } from 'react-router-dom'
@@ -34,8 +34,7 @@ const MovieList = props => {
                 image={image} 
                 releaseYear={releaseYear} 
                 genre_ids={movie.genre_ids}
-                intl={props.intl}
-                onclick={() => showMovieDetailsHandler(movie.id)}/>)
+                showDetails={() => showMovieDetailsHandler(movie.id)}/>)
         })
     }
     
