@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl-hooks';
 import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 import messagesPt from './translations/pt.json';
 import messagesEn from './translations/en.json';
 import GenresProvider from './context/genres';
@@ -23,4 +22,3 @@ ReactDOM.render(
   </IntlProvider>,
   document.getElementById('root'),
 );
-serviceWorker.unregister();

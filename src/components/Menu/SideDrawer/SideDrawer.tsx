@@ -4,28 +4,34 @@ import Header from '../Header/Header';
 import SearchBar from '../SearchBar/SearchBar';
 import LinkList from '../LinkList/LinkList';
 import Footer from '../Footer/Footer';
-import { injectIntl } from 'react-intl';
 
 /* While the SideBar component is used larger devices,
    this component is used in mobile devices. */
 
-const SideDrawer = (props) => {
-  const asignedClasses = [classes.SideDrawer];
+interface Props {
+  show: boolean;
+  onclick: () => void;
+}
 
-  if (props.show) {
-    asignedClasses.push(classes.Show);
+const SideDrawer: React.FC<Props> = (props) => {
+  const { show, onclick } = props;
+
+  const assignedClasses = [classes.SideDrawer];
+
+  if (show) {
+    assignedClasses.push(classes.Show);
   } else {
-    asignedClasses.push(classes.Hide);
+    assignedClasses.push(classes.Hide);
   }
 
   return (
-    <div className={asignedClasses.join(' ')}>
+    <div className={assignedClasses.join(' ')}>
       <Header />
-      <SearchBar intl={props.intl} />
-      <LinkList onclick={props.onclick} />
+      <SearchBar />
+      <LinkList onclick={onclick} />
       <Footer />
     </div>
   );
 };
 
-export default React.memo(injectIntl(SideDrawer));
+export default React.memo(SideDrawer);

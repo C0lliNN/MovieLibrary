@@ -1,11 +1,13 @@
 import React from 'react';
 import classes from './Footer.module.css';
 
-const Footer = () => (
+const Footer: React.FC = () => (
   <footer className={classes.Footer}>
     <h3>
-      Raphael Collin <br />
-      &copy; {new Date().getFullYear()}
+      Raphael Collin 
+      <br />
+      &copy; 
+      {new Date().getFullYear()}
     </h3>
   </footer>
 );

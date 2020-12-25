@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
-import Movie from './Movie/Movie.tsx';
+import { useRouteMatch } from 'react-router-dom';
+import Movie from './Movie/Movie';
 import classes from './MovieList.module.css';
 import ButtonBar from './ButtonBar/ButtonBar';
-import { withRouter } from 'react-router-dom';
 import MovieDetails from '../../MovieDetails/MovieDetails';
 
-const MovieList = (props) => {
-  let movies = null;
+interface MovieData {
+  id: number;
+  title: string;
+  poster_path: string;
+  release_date: string;
+  genre_ids: Array<number>;
+  showDetails?: () => void;
+}
 
+interface Props {
+  movies: Array<MovieData>;
+}
+
+const MovieList: React.FC<Props> = (props: Props) => {
   const [movieDetails, setMovieDetails] = useState({
     show: false,
     movieId: -1,
   });
 
-  const showMovieDetailsHandler = (id) => {
+  const match = useRouteMatch();
+
+  const showMovieDetailsHandler = (id: number) => {
     setMovieDetails({ show: true, movieId: id });
   };
 
@@ -21,14 +34,18 @@ const MovieList = (props) => {
     setMovieDetails({ show: false, movieId: -1 });
   };
 
-  if (props.movies) {
-    movies = props.movies.map((movie) => {
-      const image = movie['poster_path']
-        ? `http://image.tmdb.org/t/p/w342/${movie['poster_path']}`
+  const { movies } = props;
+
+  let content = null;
+
+  if (movies) {
+    content = props.movies.map((movie) => {
+      const image = movie.poster_path
+        ? `http://image.tmdb.org/t/p/w342/${movie.poster_path}`
         : null;
 
-      const releaseYear = movie['release_date']
-        ? movie['release_date'].substring(0, 4)
+      const releaseYear = movie.release_date
+        ? movie.release_date.substring(0, 4)
         : null;
 
       return (
@@ -47,8 +64,8 @@ const MovieList = (props) => {
 
   return (
     <div className={classes.MovieList}>
-      <div className={classes.MoviesHolder}>{movies}</div>
-      {!props.match.params.query && <ButtonBar />}
+      <div className={classes.MoviesHolder}>{content}</div>
+      {!(match.params as any).query && <ButtonBar />}
       <MovieDetails
         id={movieDetails.movieId}
         closeModal={hideMovieDetailsHandler}
@@ -58,4 +75,4 @@ const MovieList = (props) => {
   );
 };
 
-export default withRouter(MovieList);
+export default MovieList;

@@ -1,10 +1,9 @@
 .Hamburger {
   width: 30px;
   height: 20px;
-  position: absolute;
-  display: block;
-  top: 15px;
-  left: 15px;
+  margin-top: 15px;
+  margin-left: 20px;
+  display: none;
   cursor: pointer;
 }
 
@@ -25,10 +24,4 @@
   height: 4px;
   margin: 4px 0px;
   background-color: #a905db;
-}
-
-@media (min-width: 800px) {
-  .Hamburger {
-    display: none;
-  }
 }

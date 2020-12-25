@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React, { useContext } from 'react';
 import LinkItem from './LinkItem/LinkItem';
 import classes from './LinkList.module.css';
@@ -5,9 +7,16 @@ import { GenresContext } from '../../../context/genres';
 import Spinner from '../../UI/Spinner/Spinner';
 import ErrorMessage from '../../ErrorMessage/ErrorMessage';
 
-export default (props) => {
+interface Props {
+  onclick: () => void
+}
+
+const LinkList: React.FC<Props> = (props) => {
+
+  const { onclick } = props
+
   const links = useContext(GenresContext);
-  let content = <ErrorMessage message="Can't load the Categories" />;
+  let content: React.ReactNode = <ErrorMessage message="Can't load the Categories" />;
 
   if (links) {
     if (Object.keys(links).length > 3) {
@@ -20,8 +29,10 @@ export default (props) => {
   }
 
   return (
-    <ul className={classes.LinkList} onClick={props.onclick}>
+    <ul className={classes.LinkList} onClick={onclick}>
       {content}
     </ul>
   );
 };
+
+export default LinkList;

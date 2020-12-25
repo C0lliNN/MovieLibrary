@@ -16,7 +16,7 @@
   transform: translateX(0);
 }
 
-@media (min-width: 525px) {
+@media (min-width: 700px) {
   .SideDrawer {
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;

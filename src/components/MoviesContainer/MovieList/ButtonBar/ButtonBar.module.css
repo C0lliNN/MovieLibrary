@@ -23,8 +23,8 @@
 }
 
 .PageLink:hover,
-.Active {
-  background-color: rgb(217, 94, 233);
+.PageLink.Active {
+  background-color: rgb(226, 136, 238);
 }
 
 @media (min-width: 800px) {

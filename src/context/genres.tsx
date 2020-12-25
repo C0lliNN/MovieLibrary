@@ -1,80 +1,78 @@
-import {
+import React, {
   createContext,
   useState,
   useEffect,
-  useMemo,
   useCallback,
 } from 'react';
-import axios from 'axios';
-import React from 'react';
 import { useFormatMessage } from 'react-intl-hooks';
+import useQueryLanguage from '../hooks/use-query-language';
+import api from '../services/api';
 
 interface Props {
   children: React.ReactNode;
 }
 
+interface Genre {
+  text?: string;
+  id?: number;
+  name?: string;
+}
+
 interface Genres {
-  [index: string]: {
-    text: React.ReactNode;
-    id?: number;
-  };
+  [index: string]: Genre;
 }
 
 export const GenresContext = createContext<Genres>({});
 
-const GenresContextProvider: React.FC<Props> = (props) => {
+const GenresContextProvider: React.FC<Props> = (props: Props) => {
   const translate = useFormatMessage();
+
+  const { children } = props;
 
   const [genres, setGenres] = useState<Genres>({
     '/': {
       text: translate({
         id: 'LinkContext.Popular',
         defaultMessage: 'Popular',
-      }),
+      })?.toLocaleString(),
     },
     '/upcoming': {
       text: translate({
         id: 'LinkContext.Upcoming',
         defaultMessage: 'Upcoming',
-      }),
+      })?.toLocaleString(),
     },
   });
 
-  const queryLanguage = useMemo(
-    () =>
-      translate({
-        id: 'languageAPIIdentifider',
-        defaultMessage: 'en-US',
-      }),
-    [],
-  );
+  const queryLanguage = useQueryLanguage();
 
   const getGenres = useCallback(async () => {
     try {
-      const { data } = await axios.get(
-        `/genre/movie/list?api_key=466eefcef086aaa1375e8ecfebc6a345&language=${queryLanguage}`,
-      );
+      const { data } = await api.get(`/genre/movie/list`, {
+        params: {
+          language: queryLanguage,
+        },
+      });
       const newGenres = { ...genres };
-      for (const genre of data.genres) {
-        newGenres['/genre/' + genre.name] = {
+
+      data.genres.forEach((genre: Genre) => {
+        newGenres[`/genre/${genre.name}`] = {
           text: genre.name,
           id: genre.id,
         };
-      }
+      });
       setGenres(newGenres);
     } catch (err) {
       console.error('Invalid message');
     }
-  }, [queryLanguage]);
+  }, [queryLanguage, genres]);
 
   useEffect(() => {
     getGenres();
-  }, []);
+  }, [getGenres]);
 
   return (
-    <GenresContext.Provider value={genres}>
-      {props.children}
-    </GenresContext.Provider>
+    <GenresContext.Provider value={genres}>{children}</GenresContext.Provider>
   );
 };
 

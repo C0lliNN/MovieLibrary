@@ -1,12 +1,10 @@
 .MoviesContainer {
-  width: 100%;
-  float: none;
-  height: 100%;
+  overflow-y: auto;
 }
 
-@media (min-width: 800px) {
+@media(min-width: 700px) {
   .MoviesContainer {
-    width: 80%;
-    float: left;
+    width: 100%;
+    height: 100%;
   }
 }

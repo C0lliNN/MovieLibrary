@@ -2,14 +2,19 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import classes from './LinkItem.module.css';
 
-const LinkItem = (props) => (
+interface Props {
+  to: string;
+  text?: string | null;
+}
+
+const LinkItem: React.FC<Props> = ({ to, text }) => (
   <NavLink
     className={classes.LinkItem}
     exact
     activeClassName={classes.Active}
-    to={encodeURI(props.to)}
+    to={encodeURI(to)}
   >
-    {props.text}
+    {text}
   </NavLink>
 );
 

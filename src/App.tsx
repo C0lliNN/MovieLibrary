@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { useFormatMessage } from 'react-intl-hooks';
 import { Helmet } from 'react-helmet';
 import MoviesContainer from './components/MoviesContainer/MoviesContainer';
-import Background from './components/UI/Background/Background';
 import classes from './App.module.css';
 import Menu from './components/Menu/Menu';
 
@@ -11,7 +10,7 @@ const App: React.FC = () => {
   const translate = useFormatMessage();
 
   return (
-    <div>
+    <div className={classes.App}>
       <Helmet>
         <title>
           {translate({
@@ -20,9 +19,8 @@ const App: React.FC = () => {
           })}
         </title>
       </Helmet>
-      <Background />
       <BrowserRouter basename="/MovieLibrary">
-        <main className={classes.App}>
+        <main>
           <Menu />
           <Switch>
             <Route path="/genre/:genre" component={MoviesContainer} exact />

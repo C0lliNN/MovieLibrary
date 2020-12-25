@@ -8,8 +8,8 @@ import { useFormatMessage } from 'react-intl-hooks';
 interface Props {
   id: number;
   title: string;
-  image: string;
-  releaseYear: string;
+  image: string | null;
+  releaseYear: string | null;
   genre_ids: Array<number>;
   showDetails: () => void;
 }

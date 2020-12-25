@@ -1,10 +1,12 @@
 import React, { useState, useCallback } from 'react';
+import { useMediaQuery } from '@react-hook/media-query';
 import SideDrawer from './SideDrawer/SideDrawer';
 import Hamburger from './Hamburguer/Hamburger';
 import Backdrop from '../UI/Backdrop/Backdrop';
-import Navigation from './SideBar/SideBar';
+import SideBar from './SideBar/SideBar';
 
-const Menu = () => {
+const Menu: React.FC = () => {
+  const matches = useMediaQuery('(min-width: 700px)');
   const [showSideDrawer, setShowSideDrawer] = useState(false);
 
   const showSideDrawerHandler = useCallback(() => {
@@ -15,13 +17,14 @@ const Menu = () => {
     setShowSideDrawer(false);
   }, []);
 
-  return (
-    <React.Fragment>
+  return matches ? (
+    <SideBar onclick={showSideDrawerHandler} />
+  ) : (
+    <>
       <SideDrawer show={showSideDrawer} onclick={hideSideDrawerHandler} />
       <Hamburger onclick={showSideDrawerHandler} show={!showSideDrawer} />
-      <Backdrop show={showSideDrawer} onclick={hideSideDrawerHandler} />
-      <Navigation />
-    </React.Fragment>
+      {showSideDrawer && <Backdrop onclick={hideSideDrawerHandler} />}
+    </>
   );
 };
 
